@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <style>
+        @keyframes map {
+            0% {}
+
+            25% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            50% {
+                width: 70px;
+                height: 70px;
+                opacity: 2;
+            }
+
+            75% {
+                width: 100px;
+                height: 100px;
+                opacity: 3;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 1;
+            }
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .background {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            margin: 0 auto;
+            background: url(map.png) no-repeat center;
+
+        }
+
+        .beijing {
+            position: absolute;
+            left: 556px;
+            top: 197px;
+        }
+
+        .guangzhou {
+            position: absolute;
+            left: 552px;
+            top: 505px;
+        }
+
+        .dotted {
+
+            width: 10px;
+            height: 10px;
+            background-color: aqua;
+            border-radius: 50%;
+        }
+
+        .plus1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 20px;
+            height: 20px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: map 1.2s linear infinite;
+        }
+
+        .pulse2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 20px;
+            height: 20px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: map 1.2s linear infinite;
+            animation-delay: 0.4s;
+        }
+
+        .pulse3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 20px;
+            height: 20px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: map 1.2s linear infinite;
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="beijing">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="guangzhou">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
