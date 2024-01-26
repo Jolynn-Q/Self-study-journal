@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100sum and average</title>
+    <script>
+        //sum and average
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);
+        console.log(sum / 100);
+        alert(sum);
+        alert(sum / 100);
+
+        //odd sum
+        var odd_sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                odd_sum += i
+            }
+        }
+        console.log(odd_sum);
+        alert(odd_sum);
+
+        //100%7
+        var sum7 = 0;
+        for (var i = 0; i <= 100; i++) {
+            if (i % 7 == 0) {
+                sum7 += i;
+            }
+        }
+        console.log(sum7);
+        alert(sum7);
+
+        //5 stars
+        var str = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                str += 'o'
+            }
+            str += '\n'
+        }
+        console.log(str);
+        alert(str);
+
+        //star triangle 1
+        var string = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = i; j <= 5; j++) {
+                string += 'o'
+            }
+            string += '\n'
+        }
+        console.log(string);
+        alert(string);
+
+        //star triangle 2  
+        var str1 = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 5 - i; j < 5; j = j + 1) {
+                str1 += 'o'
+            }
+            str1 += '\n'
+        }
+        console.log(str1);
+        alert(str1);
+
+        //9*9
+        var str2 = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 9 - i; j < 9; j = j + 1) {
+                str2 += i + 'x' + (9 - j) + '=' + i * (9 - j) + '\t'
+            }
+            str2 += '\n'
+        }
+        console.log(str2);
+        alert(str2);
+
+        //9*9
+        var str2 = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = i; j > 0; j = j - 1) {
+                str2 += j + 'x' + i + '=' + i * j + '\t'
+            }
+            str2 += '\n'
+        }
+        console.log(str2);
+        alert(str2);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
