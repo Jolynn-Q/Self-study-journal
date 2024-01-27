@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = new Array();
+        arr = [1, 2, 3, 4, 5, 6, 7];
+        console.log(arr[1])
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i])
+        }
+        var arr1 = [2, 6, 1, 7, 4];
+        var sum = 0;
+        for (var i = 0; i < 5; i++) {
+            sum += arr1[i];
+        }
+        console.log(sum);
+        console.log(sum / 5);
+
+        var arrNum = [2, 6, 1, 77, 52, 25, 7, 99];
+        var nummax = arrNum[0];
+        for (var i = 0; i < arrNum.length; i++) {
+            if (arrNum[i] >= nummax) {
+                console.log(arrNum[i])
+            }
+        }
+        //新建一个数组，里面存放10个整数（  1~10）， 要求使用循环追加的方式输出： [1,2,3,4,5,6,7,8,9,,10]
+        var numb = new Array();
+        numb = [];
+        for (var i = 0; i < 10; i++) {
+            numb[i] = i + 1;
+            console.log(numb[i]);
+        }
+        console.log(numb);
+
+        //要求：将数组 [2, 0, 6, 1, 77, 0, 52, 0, 25, 7] 中大于等于 10 的元素选出来 ，放入新数组。
+
+        var arry1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var arry2 = [];
+        for (var i = 0; i <= arry1.length; i++) {
+            if (arry1[i] >= 10) {
+                arry2[i] = arry1[i]
+            }
+        }
+        console.log(arry2);
+
+        //将数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7]中的 0 去掉后，形成一个不包含 0 的新数组。
+        var arry3 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var arry4 = [];
+        j = 0;
+        for (var i = 0; i <= arry3.length; i++) {
+            if (arry3[i] != 0) {
+                arry4[j] = arry3[i]
+                j++;
+            }
+        }
+        console.log(arry4);
+
+        var arry5 = [];
+        for (var i = 0; i <= arry3.length; i++) {
+            if (arry3[i] != 0) {
+                arry5[arry5.length] = arry3[i]
+            }
+        }
+        console.log(arry5);
+
+        // 将数组 ['red', 'green', 'blue', 'pink', 'purple'] 的内容反过来存放 1
+        var drop = ['red', 'green', 'blue', 'pink', 'purple'];
+        var newarr = [];
+        j = 4;
+        for (var i = 0; i < 5; i++) {
+            newarr[j] = drop[i];
+            j--;
+        }
+        console.log(newarr);
+
+        //将数组 ['red', 'green', 'blue', 'pink', 'purple'] 的内容反过来存放2
+        var newarr1 = [];
+        for (var i = 0; i < 5; i++) {
+            newarr1[newarr1.length] = drop[4 - i]
+        }
+        console.log(newarr1);
+
+
+        // 冒泡排序 [5, 4, 3, 2, 1];
+        var bubble = [4, 1, 2, 3, 5];
+        for (var i = 0; i <= 4; i++) {
+            for (var j = 0; j <= 4; j++) {
+                if (bubble[j] > bubble[j + 1]) {
+                    var newbubble = [];
+                    newbubble = bubble[j];
+                    bubble[j] = bubble[j + 1];
+                    bubble[j + 1] = newbubble
+                }
+            }
+        }
+        console.log(bubble);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
