@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //对象字面量
+        var obj = {
+            A: 'HHH',
+            B: 'BBB',
+            C: 'RRR',
+            D: function () {
+                console.log('hhhhhhhhhhh');
+            }
+        }
+        console.log(obj.A);
+        console.log(obj.B);
+        console.log(obj.D);
+        //new object
+        var t = new Object();
+        t.bb = 12;
+        t.uu = function () {
+            console.log('hhhhhhhhhhh');
+        }
+        console.log(t.bb);
+        t.uu();
+        //new 构造函数名();
+        function Aha(color, eye, tall) {
+            this.hair = color;
+            this.face = eye;
+            this.body = tall;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+        var lily = new Aha('red', 'big', 1.65);
+        console.log(lily.hair);
+        lily.sing('hhh')
+        // 遍历对象 
+        for (var k in lily) {
+            console.log(k);
+            console.log(lily[k]);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
