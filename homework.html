@@ -5,36 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        // 1. 求 x~y的累加和
-        function asksum(x, y) {
-            var sum = 0;
-            for (var i = x; i <= y && i >= x; i++) {
-                sum += i;
-            }
-            alert(sum);
-        }
-        asksum(1, 100);
-        asksum(6, 600);
-
-        // 利用函数求数组 [5,2,99,101,67,77] 中的最大数值。
-
-        function newarr(arr) {
-            var max = arr[0]; // 假设数组的第一个元素是最大值
-            for (var i = 1; i < arr.length; i++) {
-                if (arr[i] > max) {
-                    max = arr[i]; // 更新最大值
-                }
-            }
-            return max; // 返回最大值
-        }
-        alert(newarr([5, 2, 99, 101, 67, 77])); // 弹出最大值
-
-    </script>
 </head>
 
 <body>
+    <ul>
+        <li>知否知否，应是等你好久uu</li>
+        <li>知否知否，应是等你好久011</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
 
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        var x = document.getElementsByTagName('li');
+        console.log(x);
+        console.log(x[0]);
+        for (var i = 0; i < x.length; i++) {
+            console.log(x[i]);
+        }
+        var ol = document.getElementById('ol');
+        console.log('ol');
+        console.log(ol[0]);
+        console.log(ol.getElementsByTagName('li'));
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+        var firstBox = document.queryselector('.box');
+        var nav = document.queryselector('#nav');
+        console.log(nav);
+        var li = document.querySelector('li');
+        console.log(li);
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+    </script>
 </body>
 
 </html>
