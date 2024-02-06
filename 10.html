@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //根据不同时间，页面显示不同图片，同时显示不同的问候语。 如果上午时间打开页面，显示上午好，显示上午的图片。
+    //如果下午时间打开页面，显示下午好，显示下午的图片。
+    //如果晚上时间打开页面，显示晚上好，显示晚上的图片。
+
+    <img src="images/s.gif" alt="">
+    <div>good morning</div>
+    <script>
+        //1. 获取事件源
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        // 2. 注册事件（绑定事件）
+        var date = new Date();
+        var h = date.getHours();
+        //3. 添加事件处理程序（采取函数赋值形式）
+        if (h < 12) {
+            img.src = 'images/s.gif';
+            div.innerHTML = 'good morning';
+        } else if (h < 18 && h >= 12) {
+            img.src = 'images/x.gif';
+            div.innerHTML = 'good afternoon';
+        } else (h >= 18 && h < 24) {
+            img.src = 'images/w.gif';
+            div.innerHTML = 'good night';
+        }
+
+    </script>
+
+</body>
+
+</html>
