@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button> <br>
+    <img src="images/ldh.jpg" alt="" title="刘德华" id="img1">
+    <img src="images/s.gif" alt="" id="time">
+    <div id="t">上午好</div>
+    <script>
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var img1 = document.getElementById('img1');
+        var time = document.getElementById('time');
+        var t = document.getElementById('t');
+
+        ldh.onclick = function () {
+            img1.src = 'images/zxy.jpg';
+
+        }
+        zxy.onclick = function () {
+            img1.src = 'images/ldh.jpg';
+        }
+        var date = new Date();
+        var h = date.getHours();
+        if (h < 12) {
+            t.innerHTML = "good morning";
+        } else if (h < 17) {
+            t.innerHTML = "good afternoon";
+        } else {
+            t.innerHTML = "good night";
+        }
+
+    </script>
+</body>
+
+</html>
