@@ -5,34 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(images/1.jpg) no-repeat center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+
+        }
+
+        .baidu img {
+            width: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
-        <li>知否知否，应是等你好久11</li>
-        <li>知否知否，应是等你好久11</li>
-        <li>知否知否，应是等你好久11</li>
-        <li>知否知否，应是等你好久11</li>
-
+    <ul class="baidu">
+        <li><img src="images/1.jpg"></li>
+        <li><img src="images/2.jpg"></li>
+        <li><img src="images/3.jpg"></li>
+        <li><img src="images/4.jpg"></li>
     </ul>
-    <ol id="ol">
-        <li>生僻字</li>
-        <li>生僻字</li>
-        <li>生僻字</li>
-        <li>生僻字</li>
-
-    </ol>
     <script>
-        var zf = document.getElementsByTagName('li');
-        console.log(zf);
-        console.log(zf[0]);
-        console.log(zf[2]);
-        for (var i = 0; i < zf.length; i++) {
-            console.log(zf[i]);
+        var img = document.querySelector('.baidu').querySelectorAll('img');
+        for (var i = 0; i < img.length; i++) {
+            img[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
         }
-        var ol = document.getElementById('ol');
-        console.log(ol);
-
     </script>
 </body>
 
